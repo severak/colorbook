@@ -1,0 +1,47 @@
+/* naive color scheme*/
+
+/* can be used as template */
+
+.fill.tag-natural-water, .fill.tag-landuse-reservoir { fill: lightblue; }
+.stroke.tag-natural-water, .stroke.tag-landuse-reservoir { stroke: blue; }
+.fill.tag-waterway { fill: lightblue; }
+.fill.tag-building { fill: red; }
+
+.tag-waterway { stroke: blue; stroke-width: 2px; }
+.area.tag-waterway { stroke-width: 1px; }
+
+.casing.tag-highway-motorway { stroke: black; stroke-width: 4px; }
+.stroke.tag-highway-motorway { stroke: orange; stroke-width: 2px; }
+
+
+.casing.tag-highway-motorway_link,
+.casing.tag-highway-trunk,
+.casing.tag-highway-trunk_link,
+.casing.tag-highway-primary,
+.casing.tag-highway-primary_link,
+.casing.tag-highway-secondary,
+.casing.tag-highway-secondary_link,
+.casing.tag-highway-tertiary { stroke: black; stroke-width: 4px; }
+
+.stroke.tag-highway-motorway_link,
+.stroke.tag-highway-trunk,
+.stroke.tag-highway-trunk_link,
+.stroke.tag-highway-primary,
+.stroke.tag-highway-primary_link,
+.stroke.tag-highway-secondary,
+.stroke.tag-highway-secondary_link,
+.stroke.tag-highway-tertiary { stroke: yellow; stroke-width: 2px;  }
+
+.casing.tag-highway-residential, 
+.casing.tag-highway-service { stroke: black; stroke-width: 4px; }
+.stroke.tag-highway-residential,
+.stroke.tag-highway-service { stroke: white; stroke-width: 2px;  }
+
+.casing.tag-railway-rail { stroke: black; stroke-width: 3px; }
+.stroke.tag-railway-rail { stroke: white; stroke-width: 2px; stroke-dasharray: 12,12; }
+
+.stroke.tag-railway-tram { stroke: red; stroke-width: 1; }
+
+.tag-landuse-forest { fill: green; }
+.tag-landuse-grass { fill: lightgreen; }
+.tag-tunnel { display: none; }

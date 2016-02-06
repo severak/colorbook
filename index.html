@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html><head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="app.css"/>
+	<script src="app.js"></script>
+	<title>ColorBook</title>
+</head><body class="reset">
+<div class="inverted">
+<div class="dp50">
+<strong><span class="c1">Color</span><span class="c2">Book</span></strong>
+</div>
+<div class="dp50">
+map color scheme testing tool
+</div>
+<div class="clearfix"></div>
+</div>
+<div>
+<div class="dp50">
+	<div class="map-container">
+	<object type="image/svg+xml" data="davle15.svg" id="map">Your browser does not support SVGs</object><br>
+	</div>
+</div>
+<div class="dp50">map data: 
+<select id="mapfile" onchange="changeMap()">
+<option value="davle15.svg">Davle (town, zoom 15)</option>
+<option value="davle16.svg">Davle (town, zoom 16)</option>
+<option value="davle17.svg">Davle (town, zoom 17)</option>
+<option value="hlubocepy15.svg">Hlubočepy (suburb, zoom 15)</option>
+<option value="hlubocepy17.svg">Hlubočepy (suburb, zoom 17)</option>
+<option value="lojovice15.svg">Lojovice (village, zoom 15)</option>
+<option value="luziny15.svg">Lužiny (microdistrict, zoom 15)</option>
+<option value="luziny17.svg">Lužiny (microdistrict, zoom 17)</option>
+</select>
+<textarea rows="15" cols="80" id="style_source" class="dp100">
+/* naive color scheme*/
+
+/* can be used as template */
+
+.fill.tag-natural-water, .fill.tag-landuse-reservoir { fill: lightblue; }
+.stroke.tag-natural-water, .stroke.tag-landuse-reservoir { stroke: blue; }
+.fill.tag-waterway { fill: lightblue; }
+.fill.tag-building { fill: red; }
+
+.tag-waterway { stroke: blue; stroke-width: 2px; }
+.area.tag-waterway { stroke-width: 1px; }
+
+.casing.tag-highway-motorway { stroke: black; stroke-width: 4px; }
+.stroke.tag-highway-motorway { stroke: orange; stroke-width: 2px; }
+
+
+.casing.tag-highway-motorway_link,
+.casing.tag-highway-trunk,
+.casing.tag-highway-trunk_link,
+.casing.tag-highway-primary,
+.casing.tag-highway-primary_link,
+.casing.tag-highway-secondary,
+.casing.tag-highway-secondary_link,
+.casing.tag-highway-tertiary { stroke: black; stroke-width: 4px; }
+
+.stroke.tag-highway-motorway_link,
+.stroke.tag-highway-trunk,
+.stroke.tag-highway-trunk_link,
+.stroke.tag-highway-primary,
+.stroke.tag-highway-primary_link,
+.stroke.tag-highway-secondary,
+.stroke.tag-highway-secondary_link,
+.stroke.tag-highway-tertiary { stroke: yellow; stroke-width: 2px;  }
+
+.casing.tag-highway-residential, 
+.casing.tag-highway-service { stroke: black; stroke-width: 4px; }
+.stroke.tag-highway-residential,
+.stroke.tag-highway-service { stroke: white; stroke-width: 2px;  }
+
+.casing.tag-railway-rail { stroke: black; stroke-width: 3px; }
+.stroke.tag-railway-rail { stroke: white; stroke-width: 2px; stroke-dasharray: 12,12; }
+
+.stroke.tag-railway-tram { stroke: red; stroke-width: 1; }
+
+.tag-landuse-forest { fill: green; }
+.tag-landuse-grass { fill: lightgreen; }
+.tag-tunnel { display: none; }
+</textarea><br>
+<button onclick="updateSvgStyle()">Apply style changes</button>
+<hr>
+<p>Created by <a href="https://github.com/severak">Severak</a>. Inspired by <a href="http://colorbrewer2.org/">ColorBrewer</a> and <a href="https://github.com/openstreetmap/iD/blob/master/ARCHITECTURE.md#map-rendering">rendering architecture of iD editor</a>.</p>
+<p>Mapa data by &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, rendered using <a href="https://github.com/severak/lunarender">LunaRender</a>.</p>
+</div>
+</body>
+</html>
